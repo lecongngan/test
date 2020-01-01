@@ -1,0 +1,109 @@
+body {
+    margin: 5px;
+}
+
+header {
+    text-align: center;
+    background-color: lightgrey;
+    width: auto;
+}
+
+header h1 {
+    padding: 20px 0;
+}
+
+a {
+    color: black;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: black;
+}
+
+.left {
+    width: 200px;
+    text-align: center;
+}
+
+.left p {
+    background-color: lightgrey;
+    margin: 5px 0 0 0;
+    padding: 10px;
+}
+
+.news{
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    background-color: #e6e6e6;
+}
+.article {
+    width: 260px;
+    height: 250px;
+    display: inline-block;
+    padding: 5px;
+    margin-left: 30px;
+    vertical-align:top;
+}
+.thumb {
+    width: 260px;
+    height: 140px;
+    background-color: #3e3e3e;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.title {
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 246px;
+}
+
+.view {
+    color: gray;
+}
+
+.right {
+    width: 200px;
+    text-align: center;
+}
+
+.right div {
+    width: 200px;
+    background-color: lightgrey;
+}
+
+footer {
+    text-align: center;
+    background-color: lightgrey;
+    margin-top: 5px;
+    color: red;
+    font-family: monospace;
+}
+
+footer h1 {
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+
+@media only screen and (max-width: 620px) {
+    .row {
+        display: block;
+    }
+    .mid,
+    .right,
+    .left {
+        width: 100%;
+        margin-top: 5px;
+    }
+    .right div {
+        width: 100%;
+    }
+    .news{
+        text-align: center;
+    }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>class name</h1>
+        <select name="name" id="name" onchange="myFunction()"></select>
+        <br>
+        <h1>student</h1>
+        <select id="class-name"></select>
+    </div>
+
+    <script language="JavaScript">
+        const students = [{
+            id: 1,
+            name: 'tran van a',
+            className: '.net'
+        }, {
+            id: 2,
+            name: 'tran van b',
+            className: '.net'
+        }, {
+            id: 3,
+            name: 'tran van c',
+            className: 'angular'
+        }, {
+            id: 4,
+            name: 'tran van d',
+            className: 'angular'
+        }, {
+            id: 5,
+            name: 'tran van e',
+            className: 'javar'
+        }, {
+            id: 6,
+            name: 'tran van f',
+            className: 'javar'
+        }, {
+            id: 7,
+            name: 'tran van g',
+            className: 'javar'
+        }, {
+            id: 8,
+            name: 'tran van h',
+            className: 'test'
+        }, {
+            id: 9,
+            name: 'tran van i',
+            className: 'test'
+        }, {
+            id: 10,
+            name: 'tran van j',
+            className: 'test'
+        }];
+        var student = [];
+        var arr = students.filter(function(el) {
+            if (student.indexOf(el.className) == -1) {
+                student.push(el.className);
+                return true;
+            }
+            return false;
+        });
+        var text = '';
+        for (x of student) {
+            text += '<option value="' + x + '" >' + x + '</option>';
+        }
+        document.getElementById('name').innerHTML = text;
+        function myFunction() {
+            var textname = '';
+            var value = document.getElementById('name').value;
+            for (x of students) {
+                if (value == x.className) {
+                    textname += '<option >' + x.name + '</option>';
+                }
+            }
+            document.getElementById('class-name').innerHTML = textname;
+        }
+    </script>
+</body>
+
+</html>
